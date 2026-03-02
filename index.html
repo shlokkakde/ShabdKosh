@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator — English to Hindi & Marathi Dictionary | Meanings, Translations & Sentences</title>
+    <meta name="description"
+        content="Free online English to Hindi and Marathi dictionary. Get word meanings, phonetics, translations, synonyms, antonyms, and example sentences instantly.">
+    <meta name="keywords"
+        content="English to Hindi dictionary, English to Marathi dictionary, word meaning, translation, Translator, Hindi translation, Marathi translation, online dictionary, BTech project">
+    <meta name="author" content="Translator Dictionary">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Translator — English to Hindi & Marathi Dictionary">
+    <meta property="og:description"
+        content="Translate English words to Hindi & Marathi with meanings, phonetics, and example sentences.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://Translator-dictionary.com">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Translator Dictionary",
+        "description": "English to Hindi and Marathi Dictionary with meanings, translations, and example sentences",
+        "applicationCategory": "Education",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0" }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <div class="logo-icon">T</div>
+                <div class="logo-text">
+                    <h1>Translator</h1>
+                    <span>English → Hindi · Marathi</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <span class="header-badge">Free &amp; Open</span>
+                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode"
+                    aria-label="Toggle dark mode">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" role="search" aria-label="Dictionary search">
+            <h2>Every English word,<br>translated <em>beautifully</em></h2>
+            <p>Meanings, translations to Hindi &amp; Marathi, phonetics, and example sentences all in one search.
+            </p>
+
+            <div class="search-container">
+                <div class="search-box">
+                    <div class="search-icon">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                        </svg>
+                    </div>
+                    <input type="text" id="searchInput" placeholder="Type any English word" autocomplete="off"
+                        aria-label="Search for an English word" autofocus>
+                    <button class="search-btn" id="searchBtn" aria-label="Search">Translate</button>
+                </div>
+                <div class="suggestions" id="suggestions"></div>
+            </div>
+
+            <div class="quick-words" aria-label="Popular words">
+                <button class="quick-word" onclick="searchWord('serendipity')">serendipity</button>
+                <button class="quick-word" onclick="searchWord('ephemeral')">ephemeral</button>
+                <button class="quick-word" onclick="searchWord('knowledge')">knowledge</button>
+                <button class="quick-word" onclick="searchWord('resilience')">resilience</button>
+                <button class="quick-word" onclick="searchWord('beautiful')">beautiful</button>
+                <button class="quick-word" onclick="searchWord('courage')">courage</button>
+                <button class="quick-word" onclick="searchWord('harmony')">harmony</button>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">500K+</div>
+                    <div class="stat-label">English Words</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Languages</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">a->z</div>
+                    <div class="stat-label">Free Searches</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-area" aria-live="polite">
+            <div class="loader" id="loader">
+                <div class="loader-dots"><span></span><span></span><span></span></div>
+                <p>Looking up the word</p>
+            </div>
+            <div id="results"></div>
+            <div class="history-section" id="historySection" style="display:none;">
+                <div class="history-label">Recently Searched</div>
+                <div class="history-chips" id="historyChips"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Translator Dictionary</strong> — By Shlok Kakade</p>
+        <p style="margin-top:6px;">Powered by Free Dictionary API &amp; Translation Services</p>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        aria-label="Scroll to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
